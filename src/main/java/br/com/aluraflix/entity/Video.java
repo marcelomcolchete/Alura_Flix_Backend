@@ -1,5 +1,6 @@
 package br.com.aluraflix.entity;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,11 +16,15 @@ import javax.persistence.Id;
 @Data
 public class Video {
 
+    @NotNull
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @NotNull
     private String titulo;
+    @NotNull
     private String descricao;
+    @NotNull
     private String url;
 
     @Override
